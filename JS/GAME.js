@@ -54,10 +54,9 @@ function direction(event) {
 
 function eatTail(head, arr) {
 	for(let i = 0; i < arr.length; i++) {
-		if(head.x == arr[i].x && head.y == arr[i].y)
-			clearInterval(game);
-	}
-}
+		if(head.x == arr[i].x && head.y == arr[i].y){
+		snake = [1]; snake.pop();	dir = "none"
+}}}
 
 function drawGame() {
 	ctx.drawImage(ground, 0, 0);
@@ -69,15 +68,13 @@ function drawGame() {
     	ctx.drawImage(portapImg, portap.x, portap.y);
 
 	for(let i = 0; i < snake.length; i++) {
-		ctx.fillStyle = i == 0 ? "green" : "red";
+		ctx.fillStyle = i == 0 ? "red" : "green";
 		ctx.fillRect(snake[i].x, snake[i].y, box, box);
 	}
 ctx.fillStyle = "black"
 ctx.font = "50px Arial"
-ctx.fillText('очко Лёши',box * 3, box * 1.5)
-ctx.fillText(score, box * 11.5, box * 1.5)
-
-
+ctx.fillText('Score =',box * 3, box * 1.5)
+ctx.fillText(score, box * 9, box * 1.5)
 	let snakeX = snake[0].x;
 	let snakeY = snake[0].y;
 
@@ -97,6 +94,10 @@ portal = {
 x: Math.floor((Math.random() * 17 + 1)) * box,
 y: Math.floor((Math.random() * 15 + 3)) * box,
 };
+portap = {
+x: Math.floor((Math.random() * 17 + 1)) * box,
+y: Math.floor((Math.random() * 15 + 3)) * box,
+};
 }
 
 if(snakeX == portap.x && snakeY == portap.y){
@@ -106,16 +107,37 @@ portap = {
 x: Math.floor((Math.random() * 17 + 1)) * box,
 y: Math.floor((Math.random() * 15 + 3)) * box,
 };
+portal = {
+x: Math.floor((Math.random() * 17 + 1)) * box,
+y: Math.floor((Math.random() * 15 + 3)) * box,
+};
 }
 
 	if(snakeX < box || snakeX > box * 17
-		|| snakeY < 3 * box || snakeY > box * 17)
-		clearInterval(game);
+		|| snakeY < 3 * box || snakeY > box * 17){
+	snakeX = 9 * box; snakeY = 10 * box; dir = "none"; snake = [1]; snake.pop();
+}
+else {
+}
 
 	if(dir == "left") snakeX -= box;
 	if(dir == "right") snakeX += box;
 	if(dir == "up") snakeY -= box;
 	if(dir == "down") snakeY += box;
+	if(dir == "none"){ snakeY = 10 * box; snakeX = 9 * box;
+		portap = {
+		x: Math.floor((Math.random() * 17 + 1)) * box,
+		y: Math.floor((Math.random() * 15 + 3)) * box,
+		};
+		portal = {
+		x: Math.floor((Math.random() * 17 + 1)) * box,
+		y: Math.floor((Math.random() * 15 + 3)) * box,
+		};
+		food = {
+			x: Math.floor((Math.random() * 17 + 1)) * box,
+			y: Math.floor((Math.random() * 15 + 3)) * box,
+		};
+	}
 
 	let newHead = {
 		x: snakeX,
