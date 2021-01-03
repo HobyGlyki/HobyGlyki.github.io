@@ -72,10 +72,10 @@ function drawGame() {
 		ctx.fillStyle = i == 0 ? "green" : "red";
 		ctx.fillRect(snake[i].x, snake[i].y, box, box);
 	}
-ctx.fillStyle = "white"
+ctx.fillStyle = "black"
 ctx.font = "50px Arial"
-ctx.fillText('очко',box * 3, box * 1.5)
-ctx.fillText(score, box * 7.5, box * 1.5)
+ctx.fillText('очко Лёши',box * 3, box * 1.5)
+ctx.fillText(score, box * 11.5, box * 1.5)
 
 
 	let snakeX = snake[0].x;
