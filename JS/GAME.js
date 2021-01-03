@@ -55,7 +55,19 @@ function direction(event) {
 function eatTail(head, arr) {
 	for(let i = 0; i < arr.length; i++) {
 		if(head.x == arr[i].x && head.y == arr[i].y){
-		snake = [1]; snake.pop();	dir = "none"
+		snake = [1]; snake.pop();	dir = "none";
+		portap = {
+		x: Math.floor((Math.random() * 17 + 1)) * box,
+		y: Math.floor((Math.random() * 15 + 3)) * box,
+		};
+		portal = {
+		x: Math.floor((Math.random() * 17 + 1)) * box,
+		y: Math.floor((Math.random() * 15 + 3)) * box,
+		};
+		food = {
+			x: Math.floor((Math.random() * 17 + 1)) * box,
+			y: Math.floor((Math.random() * 15 + 3)) * box,
+		}; score = 0;
 }}}
 
 function drawGame() {
@@ -115,7 +127,19 @@ y: Math.floor((Math.random() * 15 + 3)) * box,
 
 	if(snakeX < box || snakeX > box * 17
 		|| snakeY < 3 * box || snakeY > box * 17){
-	snakeX = 9 * box; snakeY = 10 * box; dir = "none"; snake = [1]; snake.pop();
+	snakeX = 9 * box; snakeY = 10 * box; dir = "none"; snake = [1]; snake.pop(); score = 0;
+	portap = {
+	x: Math.floor((Math.random() * 17 + 1)) * box,
+	y: Math.floor((Math.random() * 15 + 3)) * box,
+	};
+	portal = {
+	x: Math.floor((Math.random() * 17 + 1)) * box,
+	y: Math.floor((Math.random() * 15 + 3)) * box,
+	};
+	food = {
+		x: Math.floor((Math.random() * 17 + 1)) * box,
+		y: Math.floor((Math.random() * 15 + 3)) * box,
+	};
 }
 else {
 }
@@ -124,20 +148,7 @@ else {
 	if(dir == "right") snakeX += box;
 	if(dir == "up") snakeY -= box;
 	if(dir == "down") snakeY += box;
-	if(dir == "none"){ snakeY = 10 * box; snakeX = 9 * box;
-		portap = {
-		x: Math.floor((Math.random() * 17 + 1)) * box,
-		y: Math.floor((Math.random() * 15 + 3)) * box,
-		};
-		portal = {
-		x: Math.floor((Math.random() * 17 + 1)) * box,
-		y: Math.floor((Math.random() * 15 + 3)) * box,
-		};
-		food = {
-			x: Math.floor((Math.random() * 17 + 1)) * box,
-			y: Math.floor((Math.random() * 15 + 3)) * box,
-		};
-	}
+	if(dir == "none"){ snakeY = 10 * box; snakeX = 9 * box;	}
 
 	let newHead = {
 		x: snakeX,
@@ -147,6 +158,13 @@ else {
 	eatTail(newHead, snake);
 
 	snake.unshift(newHead);
+
+	if (score != 4);
+	else {
+		dir = "none"
+	}
+
+
 }
 
 let game = setInterval(drawGame, 150);
