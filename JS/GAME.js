@@ -159,7 +159,7 @@ else {
 
 	snake.unshift(newHead);
 
-	if (score != 4);
+	if (score != 12);
 	else {
 		dir = "none"
 	}
