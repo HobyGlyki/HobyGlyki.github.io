@@ -1,5 +1,5 @@
-# HobyGlyki.github/Start
+# Hhttps://hobyglyki.github.io/start
 Сайт с минииграми
 ----------------------------------------------------------------------------.
-# HobyGlyki.github/Start
+# https://hobyglyki.github.io/start
 Syte withe minigames
