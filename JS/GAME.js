@@ -50,6 +50,8 @@ function direction(event) {
 		dir = "right";
 	else if(event.keyCode == 40 && dir != "up")
 		dir = "down";
+		else if(event.keyCode == 100)
+			dir = "12";
 }
 
 function eatTail(head, arr) {
@@ -149,6 +151,7 @@ else {
 	if(dir == "up") snakeY -= box;
 	if(dir == "down") snakeY += box;
 	if(dir == "none"){ snakeY = 10 * box; snakeX = 9 * box;	}
+	if(dir == "12") score = 12
 
 	let newHead = {
 		x: snakeX,
@@ -159,12 +162,60 @@ else {
 
 	snake.unshift(newHead);
 
-	if (score != 12);
-	else {
-		dir = "none"
-	}
-
+if(score == 15){win()
+}
 
 }
+function nope(){ //выключение окна пороля
+	var   pass = document.getElementById('pass').value;
+			win  = document.getElementById('pass-window');
+			mask = document.getElementById('mask');
+			osn = document.getElementById('osnowa');
+			fon = document.getElementById('Fon');
+			secr = document.getElementById('Secret')
+		win.style.display='none';
+		mask.style.display='none';
+					fon.style.display='block';
+}
+function xuy() { // включение окна пороля. А ещё мой НЕ СМЕШНОЙ юмор
+	var pass = document.getElementById('pass').value;
+			win  = document.getElementById('pass-window');
+			mask = document.getElementById('mask');
+			osn = document.getElementById('osnowa');
+			Fon = document.getElementById('Fon');
+			Secr = document.getElementById('Secret')
+	win.style.display='block';
+	fon.style.display='none';
+	mask.style.display='block';
+}
+function Accept() { // пороль.
+var pass = document.getElementById('pass').value;
+		log = document.getElementById('login').value;
+		win  = document.getElementById('pass-window');
+		mask = document.getElementById('mask');
+		osn = document.getElementById('osnowa');
+		Fon = document.getElementById('Fon');
+		secr = document.getElementById('Secret')
+		wrp = document.getElementById('wrapper')
+if ( log == 'Adrian' && pass =='minikills') { // Указываем пароль и Логин
+		win.style.display='none';
+		mask.style.display='none';
+		fon.style.display='none';
+		secr.style.display='block';
+} else { alert('Доступ запрещён'); }
+}
+
+function win() {
+		dir = "none"; clearInterval(game)
+	{ctx.fillStyle="white"
+	ctx.fillRect(0, 0, box * 19, box * 19)}
+	{ctx.fillStyle = "black"
+	ctx.font = "50px Arial"
+	ctx.fillText('Ты выиграл, вот тебе',box * 3.6, box * 1.5)
+		ctx.fillText('приз',box * 9, box * 3.5)
+				ctx.fillText('Ключ: 13-21-18-4-5-18',box * 3, box * 5.5)
+				fon.style.display='block';
+}
+		}
 
 let game = setInterval(drawGame, 150);
