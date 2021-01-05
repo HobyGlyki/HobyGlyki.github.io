@@ -17,23 +17,6 @@ portapImg.src = "icon/portap.png"
 let box = 32;
 
 
-let pon = {
-	x: 2* box,
-	y:  4* box,
-}
-let pom = {
-	x: 18 * box,
-	y:  2* box,
-}
-let por = {
-	x: 2 * box,
-	y:  16* box,
-}
-let pob = {
-	x: 16 * box,
-	y:  16* box,
-}
-
 let score = 0;
 
 let food = {
@@ -90,56 +73,7 @@ function eatTail(head, arr) {
 			y: Math.floor((Math.random() * 15 + 3)) * box,
 		}; score = 0;
 }}}
-let: k = 0
 function drawGame() {
-	if (k == 0) {dir4="0"; dir3= "0"; dir2 = "0";dir1 = "0"; k = 1;}
-
-
-
-
-if(dir1 == "0") pon.x -= box ;
-if(dir1 == "0") pon.y -= box ;
-if(dir1 == "1") pon.x += box ;
-if(dir1 =="1") pon.y += box ;
-
-if(pon.y < box * 4)
-dir1 = 1;
-if(pon.y > box * 16)
-dir1 = 0;
-
-if(dir2 == "0") pom.x -= box ;
-if(dir2 == "0") pom.y += box ;
-if(dir2 == "1") pom.x += box ;
-if(dir2 =="1") pom.y -= box ;
-
-if(pom.y > box * 16)
-dir2 = 1;
-if(pom.y < box * 4)
-dir2 = 0;
-
-if(dir3 == "0") por.x -= box ;
-if(dir3 == "0") por.y += box ;
-if(dir3 == "1") por.x += box ;
-if(dir3 =="1") por.y -= box ;
-
-if(por.y > box * 16)
-dir3 = 1;
-if(por.y < box * 4)
-dir3 = 0;
-
-if(dir4 == "0") pob.x += box ;
-if(dir4 == "0") pob.y += box ;
-if(dir4 == "1") pob.x -= box ;
-if(dir4 =="1") pob.y -= box ;
-
-if(pob.y > box * 16)
-dir4 = 1;
-if(pob.y < box * 4)
-dir4 = 0;
-
-
-
-
 	ctx.drawImage(ground, 0, 0);
 
 	ctx.drawImage(foodImg, food.x, food.y);
@@ -152,14 +86,6 @@ dir4 = 0;
 		ctx.fillStyle = i == 0 ? "red" : "green";
 		ctx.fillRect(snake[i].x, snake[i].y, box, box);
 	}
-{ ctx.fillStyle = "white";
-	ctx.fillRect(pon.x, pon.y, box, box)
-
-		ctx.fillRect(pom.x, pom.y, box, box)
-
-ctx.fillRect(por.x, por.y, box, box)
-ctx.fillRect(pob.x, pob.y, box, box)}
-
 
 
 ctx.fillStyle = "black"
@@ -168,24 +94,6 @@ ctx.fillText('Score =',box * 3, box * 1.5)
 ctx.fillText(score, box * 9, box * 1.5)
 	let snakeX = snake[0].x;
 	let snakeY = snake[0].y;
-
-  if(snakeX == pon.x && snakeY == pon.y ||snakeX == por.x && snakeY == por.y || snakeX == pom.x && snakeY == pom.y || snakeX == pob.x && snakeY == pob.y){
-
-		snakeX = 9 * box; snakeY = 10 * box; dir = "none"; snake = [1]; snake.pop(); score = 0;
-		portap = {
-		x: Math.floor((Math.random() * 17 + 1)) * box,
-		y: Math.floor((Math.random() * 15 + 3)) * box,
-		};
-		portal = {
-		x: Math.floor((Math.random() * 17 + 1)) * box,
-		y: Math.floor((Math.random() * 15 + 3)) * box,
-		};
-		food = {
-			x: Math.floor((Math.random() * 17 + 1)) * box,
-			y: Math.floor((Math.random() * 15 + 3)) * box,
-
-	}}
-
 
 	if(snakeX == food.x && snakeY == food.y) {
 		score++;
@@ -313,4 +221,4 @@ function win() {
 }
 		}
 
-let game = setInterval(drawGame, 150);
+let game = setInterval(drawGame, 130);
