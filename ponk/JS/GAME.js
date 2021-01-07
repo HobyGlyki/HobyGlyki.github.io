@@ -143,7 +143,7 @@ let: dir4 = "0"
 let: dir5 = "0"
 let: dir6 = "0"
 let: dir7 = "0"
-
+let: dirw = "0"
 
 //кнопки
 document.addEventListener("keydown", direction);
@@ -283,7 +283,7 @@ if (rtd.x != rtdS.x+2 || rtd.y-2 != rtdS.y){rtdImg.src = "icon/radImg.png";dir6 
 if (ryd.x == rydS.x +2&& ryd.y-2 == rydS.y){rydImg.src = "icon/radSImg.png";dir7 = "1"}
 if (ryd.x != rydS.x+2 || ryd.y-2 != rydS.y){rydImg.src = "icon/radImg.png";dir7 = "0"}
 
-if (dir1 == "1"&&dir2 == "1"&&dir3 == "1"&&dir4 == "1"&&dir5 == "1"&&dir6 == "1"&&dir7 == "1"){dorw="1"}
+if (dir1 == "1"&&dir2 == "1"&&dir3 == "1"&&dir4 == "1"&&dir5 == "1"&&dir6 == "1"&&dir7 == "1"){dirw="1"}
 if(dirw =="1"){
 
       ctx.drawImage(win, 0, 0)
