@@ -69,7 +69,7 @@ let: ryd = { // ящик
 }
 
 
-
+//места куда ставить ящики
 let: radS ={
   x: box+gran,
   y: gran + box*2
