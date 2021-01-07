@@ -98,7 +98,7 @@ let: rydS ={
   x: box+gran,
   y: gran + box*4
 }
-
+//начальные диры
 let: yrwalk = "walk"
 let: yuwalk = "walk"
 let: ylwalk = "walk"
@@ -145,7 +145,7 @@ let: dir6 = "0"
 let: dir7 = "0"
 
 
-
+//кнопки
 document.addEventListener("keydown", direction);
 document.addEventListener("keydown", radMov);
 document.addEventListener("keydown", rqdMov);
@@ -157,7 +157,7 @@ document.addEventListener("keydown", rtdMov);
 document.addEventListener("keydown", rydMov);
 
 
-
+//ящики
 function rtdMov(event) {
   if(event.keyCode == 37 && tlwalk != "none" && man.x +2 == rtd.x && man.y+2==rtd.y )
 rtd.x = rtd.x - box
@@ -229,7 +229,7 @@ rad.y = rad.y + box
 
 
 
-function direction(event) { //Кнопки
+function direction(event) { //чувак
 	if(event.keyCode == 37 && lwalk != "none" && mlwalk != "none")
 		man.x = man.x - box
 	else if(event.keyCode == 38 && uwalk != "none" && muwalk != "none")
