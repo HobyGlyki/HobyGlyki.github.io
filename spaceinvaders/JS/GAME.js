@@ -284,7 +284,7 @@ function drawspace() {
 for(let i = 0; i < space1.length; i++) {
   ctx.drawImage(space1[i].s, space1[i].x, space1[i].y, space1[i].d, space1[i].w)
 }
-  ctx.drawImage(spacei, ship.x, ship.y, ship.d, ship.w)
+  ctx.drawImage(shipi, ship.x, ship.y, ship.d, ship.w)
   for(let i = 0; i < att.length; i++) {
     ctx.fillStyle = i == 0 ? "white" : "white";
     ctx.fillRect(att[i].x, att[i].y, att[i].d, att[i].w);}
