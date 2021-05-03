@@ -310,6 +310,4 @@ if(score == 55){op=1; win="Win"}
 
 }
 let inter =setInterval(drawspace, 10)
-//  else if(downs=="a" && space1[0].x<=20 && times == 5){ downs = "w"}
-  //if(times == 5&& dir == "w"){ty[0]+=27.5; downs = "d"}
-//}}
+//ты что-то забыл?
