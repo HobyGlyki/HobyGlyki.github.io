@@ -310,4 +310,4 @@ if(score == 55){op=1; win="Win"}
 
 }
 let inter =setInterval(drawspace, 10)
-//ты что-то забыл?
+//Ты что-то забыл?
