@@ -13,6 +13,12 @@ const shipi2  = new Image();
 shipi2.src = "icon/SpaceI2.png"
 const death = 0
 
+let dfell="icon/deathif.png"
+let gfell="icon/groundsf.png";
+let tfell="icon/tankf.png";
+let ffell="icon/SpaceI1f.png"
+let sfell="icon/SpaceIf.png"
+
 
 let livet = [0, 1, 2];
       let agt = [0, 1, 2];
@@ -377,11 +383,11 @@ if(lives == 0){tank.src =deathik; op=1; win="GameOver"; downs="n"; cum = "0"}
 if(score == 55){op=1; win="Win";}
 
 if(fell==3){
-deathik="icon/deathif.png"
-ground.src = "icon/groundsf.png";
-tank.src = "icon/tankf.png";
-shipi1.src = "icon/SpaceI1f.png"
-shipi.src = "icon/SpaceIf.png"
+deathik=dfell;
+ground.src = gfell;
+tank.src = tfell
+shipi1.src = ffell
+shipi.src = sfell
 shrift='#8C1332';
 lives=1;
 livet.pop()
