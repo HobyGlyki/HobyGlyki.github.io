@@ -13,11 +13,11 @@ const shipi2  = new Image();
 shipi2.src = "icon/SpaceI2.png"
 const death = 0
 
-let dfell="icon/deathif.png"
+let dfell="icon/deathif.png";
 let gfell="icon/groundsf.png";
 let tfell="icon/tankf.png";
-let ffell="icon/SpaceI1f.png"
-let sfell="icon/SpaceIf.png"
+let ffell="icon/SpaceI1f.png";
+let sfell="icon/SpaceIf.png";
 
 
 let livet = [0, 1, 2];
