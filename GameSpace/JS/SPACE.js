@@ -2,7 +2,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const ground = new Image();
-ground.src = "icon/groundsf.png";
+ground.src = "icon/grounds.png";
 const tank = new Image();
 tank.src = "icon/tank.png";
 const shipi1  = new Image();
@@ -13,11 +13,11 @@ const shipi2  = new Image();
 shipi2.src = "icon/SpaceI2.png"
 const death = 0
 
-let dfell="icon/deathif.png"
-let gfell="icon/groundsf.png";
-let tfell="icon/tankf.png";
-let ffell="icon/SpaceI1f.png"
-let sfell="icon/SpaceIf.png"
+let dfell="icon/deathiF.png"
+let gfell="icon/groundsF.png";
+let tfell="icon/tankF.png";
+let ffell="icon/SpaceI1F.png"
+let sfell="icon/SpaceIF.png"
 
 
 let livet = [0, 1, 2];
