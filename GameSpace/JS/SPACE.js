@@ -2,7 +2,7 @@ const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
 const ground = new Image();
-ground.src = "icon/grounds.png";
+ground.src = "icon/groundsf.png";
 const tank = new Image();
 tank.src = "icon/tank.png";
 const shipi1  = new Image();
