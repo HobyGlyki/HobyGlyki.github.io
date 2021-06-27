@@ -20,13 +20,13 @@ const radImg = new Image();
     x: 2 * box + gran,
     y: 2 * box + gran,}
 let rad = [
-{ src: radImg,  x: 3*box+gran, w:1, s:1, d:1, a:1,y: 2 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 3 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 4 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg,x: 5 * box + gran, w:1, s:1, d:1, a:1, y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg,x: 3 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
-  src: radImg, x: 1 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  }
+{ src: radd,  x: 3*box+gran, w:1, s:1, d:1, a:1,y: 2 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 3 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 4 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd,x: 4 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd,x: 5 * box + gran, w:1, s:1, d:1, a:1, y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd,x: 3 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  },{
+  src: radd, x: 1 * box + gran, w:1, s:1, d:1, a:1,y: 6 * box + gran, w:1, s:1, d:1, a:1  }
 ] //Все ящики ^
 //места куда ставить ящики v
 let radS = [{
