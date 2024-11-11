@@ -165,7 +165,7 @@ else {
 
 	snake.unshift(newHead);
 
-if(score == 15){win()
+if(score == 10){win()
 }
 
 }
